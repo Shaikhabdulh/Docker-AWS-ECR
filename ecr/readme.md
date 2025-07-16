@@ -65,11 +65,9 @@ docker run -d -p 8080:80 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/my_app:
 
 ```
 ecr/
-├── README.md            # This documentation file
 ├── Dockerfile           # Sample Dockerfile (e.g. for Nginx)
 ├── index.html           # Sample static webpage to serve via Nginx
 ├── ecr_push_script.sh   # (Optional) Bash script to automate login/tag/push
-└── notes.md             # Optional: notes, screenshots or manual steps
 ```
 
 ---
@@ -139,18 +137,6 @@ docker push $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPO_NAME:$IMAGE_TAG
 ```
 
 > 🔐 Ensure that your AWS CLI is configured properly with `aws configure`.
-
-### `notes.md`
-```md
-# AWS ECR Push Example Notes
-
-- ✅ Built Docker image using Dockerfile
-- ✅ Successfully authenticated using AWS CLI
-- ✅ Pushed image to ECR: my_nginx_ecr:latest
-- ✅ Verified via AWS Console > ECR > my_nginx_ecr
-- ✅ Pulled from another system and ran container successfully
-
----
 
 ## Useful Links:
 - AWS ECR Docs: https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html
